@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .log{
+            width: 600px;
+            height: 450px;
+            overflow: auto;
+            background-color: silver;
+            border: 1px solid darkslategray;
+            margin: auto;
+        }
+        .log p{
+            width: 100px;
+            float: left;
+            margin: 10px;
+            background-color: dimgray;
+            text-align: center;
+            line-height: 50px;
+            height: 50px;
+            color: floralwhite;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click", clickhandler);
+            //---------------------------------------------------------------------------------
+            document.getElementsByTagName("button")[1].addEventListener("click", removeclickhandlers);
+        };
+        function clickhandler(){
+            document.getElementsByClassName("log")[0].innerHTML+="<p> clicked </p>"
+        };
+        function removeclickhandlers(){
+            document.getElementsByTagName("button")[0].removeEventListener("click", clickhandler);
+            //---------------------------------------------------------------------------------
+            document.getElementsByTagName("button")[1].removeEventListener("click", removeclickhandlers);
+        };
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <button>Click me</button>
+    <button>Stop clcking the buttons</button>
+    <hr>
+    <div class="log"></div>
+</body>
+</html>

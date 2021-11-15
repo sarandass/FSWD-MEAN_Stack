@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){
+            document.getElementsByTagName('h1')[0].textContent = "Welcome to your life";
+        };
+        // shortcut to comment for html in vscode (for windows) : ctrl+K+C
+        // shortcut to uncomment for html in vscode (for windows) : ctrl+K+U
+        // <!--[0] : all tag elements are in array format-->
+        // <!--window.onload = init;-->>
+        window.addEventListener("load", init)
+    </script>
+</head>
+<!--<body onload="init()"> : can't debug and detatch-->
+<body>
+    <h1></h1>
+    <!--<script>
+        init(); 
+    </script>-->
+</body>
+</html>
+
